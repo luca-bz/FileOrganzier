@@ -19,7 +19,7 @@ Use the Organizer
 
 #### Run the install script
 ```bash
-    python3 installer.py
+    pip install -r requirements.txt
 ```
 #### Run the script
 ```bash
