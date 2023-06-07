@@ -1,5 +1,5 @@
 # Organizer
-![Github](/pcitures/OrganizerBanner.png)
+![Github](/Pictures/OrganizerBanner.png)
 
 
 Python script what organize you files into folders.
