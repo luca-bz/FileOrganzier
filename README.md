@@ -1,6 +1,6 @@
-
-![Logo](https://raw.githubusercontent.com/luca4hh/Organizer/main/Pictures/OrganizerBanner.png)
 # Organizer
+![Github](/pcitures/OrganizerBanner.png)
+
 
 Python script what organize you files into folders.
 
