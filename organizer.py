@@ -1,13 +1,9 @@
 import os
 import shutil
 
-
+directory = input("Path of Organize directory: ")
 
 class Organizer:
-    def __init__(self):
-        self.current_dir = r'F:\\Programmieren\\Python\\FileOrganzier'
-        self.current_directory = os.getcwd()
-
 
     def organize(path):
         try:
@@ -15,7 +11,6 @@ class Organizer:
             for file in files:
                 filename, extentions = os.path.splitext(file)
                 extentions = extentions[1:]
-                print(extentions)
                 move_from = path + "/" + file
                 move_to = path + "/" + extentions + "/" + file
                 c = path + "/" + extentions
@@ -28,4 +23,4 @@ class Organizer:
             print("You dont have permission")
                     
 
-Organizer.organize(r'F:\\Programmieren\\Python\\FileOrganzier')
+Organizer.organize(directory)
