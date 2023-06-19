@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import filedialog as fd
 
 class Organizer:
-    
+
     """
     def gui():
         root = tk.Tk()
@@ -29,6 +29,8 @@ class Organizer:
         # run the application
         root.mainloop()
     """
+
+    # windows registry: Computer\HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers
 
     def organize(path):
 
