@@ -4,7 +4,8 @@ import tkinter as tk
 from tkinter import filedialog as fd
 
 class Organizer:
-
+    
+    """
     def gui():
         root = tk.Tk()
         root.title('Select Folder')
@@ -27,7 +28,7 @@ class Organizer:
         quit_btn.pack(expand=True)
         # run the application
         root.mainloop()
-
+    """
 
     def organize(path):
 
