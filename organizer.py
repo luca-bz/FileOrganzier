@@ -31,8 +31,10 @@ class Organizer:
     """
 
     # windows registry: Computer\HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers
-    #https://www.online-tech-tips.com/computer-tips/windows-right-click-context-menu/
-    #https://www.thewindowsclub.com/remove-click-context-menu-items-editors
+    # https://www.online-tech-tips.com/computer-tips/windows-right-click-context-menu/
+    # https://www.thewindowsclub.com/remove-click-context-menu-items-editors
+    # https://stackoverflow.com/questions/8570288/run-python-script-on-selected-file
+    # https://www.youtube.com/watch?v=jS2LuG1p8Vw&t=1s
 
     def organize(path):
 
