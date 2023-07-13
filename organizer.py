@@ -30,13 +30,6 @@ class Organizer:
         root.mainloop()
     """
 
-    # windows registry: Computer\HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers
-    # https://www.online-tech-tips.com/computer-tips/windows-right-click-context-menu/
-    # https://www.thewindowsclub.com/remove-click-context-menu-items-editors
-    # https://stackoverflow.com/questions/8570288/run-python-script-on-selected-file
-    # https://www.youtube.com/watch?v=jS2LuG1p8Vw&t=1s
-    # pip lib: https://pypi.org/project/context-menu/
-
     def organize(path):
 
             try:
@@ -53,7 +46,9 @@ class Organizer:
                         os.makedirs(c)
                         shutil.move(move_from, move_to)
             except PermissionError:
+                print()
                 print("You dont have permission")
                     
 
-Organizer.gui()
+if __name__ == "__main__":
+    Organizer.organize(os.getcwd())
