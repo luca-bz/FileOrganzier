@@ -12,7 +12,6 @@ import winreg as r
 def reg():
     cwd = os.getcwd()
     py_exe = sys.executable
-    hidden_terminal = '\\'.join(py_exe.split('\\')[:-1])+"\\pythonw.exe"
 
     key_path = r"Directory\\Background\\shell\\Organizer"
 
@@ -22,9 +21,8 @@ def reg():
 
     #inner key 
     key1 = r.CreateKeyEx(key, r"command")
-    r.SetValue(key1, '', r.REG_SZ, py_exe + f' "{cwd}\\organizer.py"')
+    r.SetValue(key1, '', r.REG_SZ, py_exe + f'"{cwd}\\organizer.py"')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     reg()
-
