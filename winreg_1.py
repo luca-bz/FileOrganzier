@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 import winreg as r
 
     # windows registry: Computer\HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers
@@ -10,18 +11,23 @@ import winreg as r
 
 
 def reg():
-    cwd = os.getcwd()
-    py_exe = sys.executable
+    cwd = os.getcwd() + '\\' + 'organizer.exe'
 
     key_path = r"Directory\\Background\\shell\\Organizer"
 
     # outer key
     key = r.CreateKeyEx(r.HKEY_CLASSES_ROOT, key_path)
-    r.SetValue(key, '', r.REG_SZ, '&Organize folder')
+    r.SetValue(key, '', r.REG_SZ, 'Organize folder')
+    try:
+        pkg = os.path.expanduser('~') + '\\' + 'organizer'
+        os.mkdir(pkg)
+        shutil.move(cwd, pkg)
+    except:
+        pass
 
     #inner key 
     key1 = r.CreateKeyEx(key, r"command")
-    r.SetValue(key1, '', r.REG_SZ, py_exe + f'"{cwd}\\organizer.py"')
+    r.SetValue(key1, '', r.REG_SZ, r'C:\Users\Luca\organizer\organizer.exe')
 
 
 if __name__ == '__main__':
